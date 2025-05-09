@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dahej Calculator - Calculate My Dahej</title>
+  <link rel="stylesheet" href="dahej.css">
+</head>
+<body>
+  <header>
+    <h1>CalculateMyDahej.com</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>Dahej Calculator (Parody Tool)</h2>
+      <p>This calculator is purely satirical and meant for awareness and humor.</p>
+
+      <form id="dahejForm">
+        <label for="education">Education Level:</label>
+        <select id="education" required>
+          <option value="100000">High School</option>
+          <option value="300000">Bachelor's Degree</option>
+          <option value="500000">Master's Degree</option>
+          <option value="700000">PhD</option>
+        </select>
+
+        <label for="salary">Monthly Salary (INR):</label>
+        <input type="number" id="salary" required>
+
+        <label for="govtJob">Government Job?</label>
+        <select id="govtJob" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label for="looks">Looks (1 to 10):</label>
+        <input type="number" id="looks" min="1" max="10" required>
+
+        <label for="cows">Number of Cows at Home:</label>
+        <input type="number" id="cows" min="0" required>
+
+        <label for="land">Land Owned (in acres):</label>
+        <input type="number" id="land" min="0" step="0.1" required>
+
+        <button type="submit">Calculate Dahej</button>
+      </form>
+
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 CalculateMyDahej.com — This is satire, not advice.
+  </footer>
+
+  <script>
+    document.getElementById('dahejForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const education = parseInt(document.getElementById('education').value);
+      const salary = parseInt(document.getElementById('salary').value);
+      const govtJobBonus = document.getElementById('govtJob').value === 'yes' ? 500000 : 0;
+      const looksValue = parseInt(document.getElementById('looks').value) * 10000;
+      const cows = parseInt(document.getElementById('cows').value);
+      const land = parseFloat(document.getElementById('land').value);
+
+      let totalDahej = education + (salary * 12) + govtJobBonus + looksValue;
+
+      if (cows > 5) {
+        totalDahej += 10000000; // 1 crore bonus
+      }
+
+      totalDahej += land * 50000;
+
+      let reward = '';
+      if (salary >= 100000) {
+        reward = '🎁 Eligible for a "virgin bride" (satirical condition)';
+      } else {
+        reward = '⚠️ Girl is not virgin (satirical condition)';
+      }
+
+      document.getElementById('result').innerHTML = `
+        <h3>Estimated Dahej:</h3>
+        <p class="dahej-amount">₹${totalDahej.toLocaleString()}</p>
+        <p>${reward}</p>
+        <p class="disclaimer">* This is a parody tool. We do NOT promote dowry, sexism, or stereotypes. Use it for humor and awareness only.</p>
+      `;
+    });
+  </script>
+</body>
+</html>

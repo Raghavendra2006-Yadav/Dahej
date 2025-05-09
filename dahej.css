@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .dahej-amount {
+    font-size: 28px;
+    color: #007bff;
+  }
+  
+  .disclaimer {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+  }
+  
